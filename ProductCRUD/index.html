@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple CRUD </title>
+</head>
+<body>
+
+    <h1>Simple CRUD </h1>
+
+    <!-- CRUD Form -->
+    <form action="index.php" method="POST">
+        <label for="id">ID:</label><br>
+        <input type="number" id="id" name="id"><br><br>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description" required></textarea><br><br>
+
+        <label for="price">Price:</label><br>
+        <input type="number" id="price" name="price" step="0.01" required><br><br>
+
+        <label for="quantity">Quantity:</label><br>
+        <input type="number" id="quantity" name="quantity" required><br><br>
+
+        <label for="barcode">Barcode:</label><br>
+        <input type="text" id="barcode" name="barcode" required><br><br>
+
+        <!-- Hidden input to store the action -->
+        <input type="hidden" id="action" name="action" value="">
+
+        <!-- Action Buttons -->
+        <button type="button" onclick="handleAction('create')">Create</button>
+        <button type="button" onclick="handleAction('update')">Update</button>
+        <button type="button" onclick="handleAction('delete')">Delete</button>
+    </form>
+</body>
+</html>
